@@ -115,6 +115,24 @@ const Mutation = new GraphQLObjectType({
                 });
                 return author.save();  //save() is function from MongoDB, data Saves to MongoDB
             }
+        },
+        
+        addBook: {
+            type: BookType,
+            args: {
+                name: {type: GraphQLString},
+                genre: {type: GraphQLString},
+                authorId : {type: GraphQLID}
+            },
+            resolve(parent, args) {
+                //Book() is Model which is imported from models
+                let book = new Book({
+                    name: args.name,
+                    genre: args.genre,
+                    authorId: args.authorId
+                });
+                return book.save();  //save() is function from MongoDB, data Saves to MongoDB
+            }
         }
     }
 })
