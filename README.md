@@ -24,3 +24,18 @@ password: sai123
 **Whitelist IP address.
 
 npm install mongoose
+
+
+##Mutations:
+    Mutations: delete, update, create data.
+
+    Create a mutation in schema.
+    
+    mutation {
+        addAuthor(name: "baludu", age: 30) {
+            name
+            age
+        }
+    }
+
+    
