@@ -38,4 +38,6 @@ npm install mongoose
         }
     }
 
-    
+
+##Validate Data
+Validate notNull by new GraphQLNotNull(...)
